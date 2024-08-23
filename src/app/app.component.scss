@@ -1,0 +1,38 @@
+ion-header, ion-footer {
+    --background: #3f51b5;
+    --color: white;
+  }
+
+  ion-card {
+    margin: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  ion-card-title {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #3f51b5;
+  }
+
+  ion-item {
+    margin-bottom: 16px;
+  }
+
+  ion-input {
+    padding-left: 8px;
+  }
+
+  ion-label {
+    text-align: center;
+    color: #888;
+    margin-top: 16px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
