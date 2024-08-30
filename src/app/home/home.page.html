@@ -6,6 +6,9 @@
     <ion-title>Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
+
+<app-main-menu [userName]="userName"></app-main-menu> 
+
+<ion-content [fullscreen]="true" id="main-content">
   <p>Bienvenido a la página principal.</p>
 </ion-content>
