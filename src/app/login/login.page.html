@@ -1,11 +1,7 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-
 <ion-content class="ion-padding">
+  <div class="welcome-box">
+    <p>¡BIENVENIDO ESTUDIANTE DEL LICEO CODEDOUC!</p>
+  </div>
   <div class="container">
     <ion-card>
       <ion-card-header>
@@ -23,9 +19,9 @@
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
         </ion-item>
-        <ion-button expand="block">Ingresar</ion-button>
+        <ion-button id="btn-ion" expand="block">Ingresar</ion-button>
 
-        <p>No tienes cuenta, <a [routerLink]="['/register']">Registrate</a></p>
+        <p>No tienes cuenta, <a id="RegisterLink" [routerLink]="['/register']">Registrate</a></p>
         <p><a [routerLink]="['/home']">¿Olvidaste tu contraseña?</a></p>
       </ion-card-content>
       
