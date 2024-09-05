@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Restablecer Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="container" (ngSubmit)="resetPassword()">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Ingresa los datos</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-icon slot="start" name="mail"></ion-icon>
+          <ion-input [(ngModel)]="email" name="email" required></ion-input>
+        </ion-item>
+        <ion-button
+          expand="block"
+          type="submit"
+          id="btn-ion"
+          [disabled]="!email"
+          >Recuperar clave</ion-button
+        >
+        <ion-text color="danger" *ngIf="errorMessage"
+          >{{ errorMessage }}</ion-text
+        >
+        <ion-text color="success" *ngIf="successMessage"
+          >{{ successMessage }}</ion-text
+        >
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>
