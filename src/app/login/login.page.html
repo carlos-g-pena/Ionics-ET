@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Iniciar Sesión</ion-title>
-  </ion-toolbar>
+  <div class="welcome-box">
+    <p>¡BIENVENIDO ESTUDIANTE DEL LICEO CODEDOUC!</p>
+  </div>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -22,7 +22,7 @@
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
         </ion-item>
-        <ion-button expand="block"type="submit" [disabled]="!loginForm.valid">Iniciar Sesión</ion-button>
+        <ion-button expand="block"type="submit" id="btn-ion"[disabled]="!loginForm.valid">Iniciar Sesión</ion-button>
 
         <p>No tienes cuenta, <a [routerLink]="['/register']">Regístrate</a></p>
         <p><a [routerLink]="['/home']">¿Olvidaste tu contraseña?</a></p>
