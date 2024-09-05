@@ -1,9 +1,14 @@
+ion-content {
+  --background: #24535d;
+}
+
 ion-header, ion-footer {
-    --background: #3f51b5;
+    --background: #1b454e;
     --color: white;
   }
 
   ion-card {
+    min-height: 350px;
     margin: 16px;
     border-radius: 10px;
     overflow: hidden;
@@ -13,7 +18,7 @@ ion-header, ion-footer {
   ion-card-title {
     font-size: 1.5rem;
     text-align: center;
-    color: #3f51b5;
+    color: #1b454e;
   }
 
   ion-item {
@@ -36,7 +41,26 @@ ion-header, ion-footer {
     align-items: center;
     height: 100%;
   }
+
   p{
     text-align: center;
     margin-top: 10px;
   }
+
+  #btn-ion {
+    --background: #24535d;
+    --background-hover: #1b454e   ;
+    --background-activated: #1b454e   ;
+    --background-focused: #24535d;
+  }
+
+  p a {
+    color: #24535d; 
+  }
+
+  ion-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+  }
+  
