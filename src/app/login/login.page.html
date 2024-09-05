@@ -1,33 +1,32 @@
-<ion-content class="ion-padding">
-  <div class="welcome-box">
-    <p>¡BIENVENIDO ESTUDIANTE DEL LICEO CODEDOUC!</p>
-  </div>
-  <div class="container">
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form class="container" [formGroup]="loginForm" (ngSubmit)="login()">
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Inicio de Sesion</ion-card-title>
+        <ion-card-title>Iniciar Sesión</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <ion-item>
-          <ion-icon slot="start" name="person"></ion-icon>
-          <ion-input placeholder="Rut"></ion-input>
+          <ion-icon slot="start" name="mail"></ion-icon>
+          <ion-input formControlName="email" placeholder="Email"></ion-input>
         </ion-item>
 
         <ion-item>
           <ion-icon slot="start" name="finger-print-outline"></ion-icon>
-          <ion-input placeholder="Clave" type="password">
+          <ion-input formControlName="password" placeholder="Clave" type="password">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
         </ion-item>
-        <ion-button id="btn-ion" expand="block">Ingresar</ion-button>
+        <ion-button expand="block"type="submit" [disabled]="!loginForm.valid">Iniciar Sesión</ion-button>
 
-        <p>No tienes cuenta, <a id="RegisterLink" [routerLink]="['/register']">Registrate</a></p>
+        <p>No tienes cuenta, <a [routerLink]="['/register']">Regístrate</a></p>
         <p><a [routerLink]="['/home']">¿Olvidaste tu contraseña?</a></p>
       </ion-card-content>
-      
-      
     </ion-card>
-  </div>
+  </form>
 </ion-content>
-
-
