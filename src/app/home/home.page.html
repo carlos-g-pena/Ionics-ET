@@ -7,8 +7,35 @@
   </ion-toolbar>
 </ion-header>
 
-<app-main-menu [userName]="userName"></app-main-menu> 
+<app-main-menu [userName]="userName"></app-main-menu>
 
 <ion-content [fullscreen]="true" id="main-content">
-  <p>Bienvenido a la página principal.</p>
+  <ion-grid class="ion-text-center">
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-text color="primary">
+          <h1>Bienvenido, {{ userName }}!</h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md="6" offset-md="3">
+        <ion-icon name="school-outline" size="large"></ion-icon>
+        <p>Accede a tus clases y tareas</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" size-md="6" offset-md="3">
+        <ion-button expand="block" color="secondary" routerLink="/perfil">
+          Ver Perfil
+        </ion-button>
+        <ion-button expand="block" color="secondary" routerLink="/asistencia">
+          Ver Asistencia
+        </ion-button>
+        <ion-button expand="block" color="secondary" routerLink="/notas">
+          Ver Notas
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
