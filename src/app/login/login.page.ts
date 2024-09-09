@@ -29,14 +29,14 @@ export class LoginPage {
       await this.afAuth.signInWithEmailAndPassword(email, password);
       this.navCtrl.navigateForward('/home');
     } catch (error: any) {
-      this.showError(error.message);
+      this.showError();
     }
   }
 
-  async showError(message: string) {
+  async showError() {
     const alert = await this.alertCtrl.create({
       header: 'Error en el inicio de sesión',
-      message,
+      message:'Credenciales invalidas',
       buttons: ['OK'],
     });
     await alert.present();
